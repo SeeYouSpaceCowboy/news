@@ -6,8 +6,13 @@ h2, h3 {
   font-family: 'Libre Baskerville', serif;
   color: #222;
   letter-spacing: normal;
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #aaa;
   padding-bottom: 1em;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: .9em;
 }
 
 body {
@@ -16,7 +21,8 @@ body {
 
 p {
   font-family: 'Roboto', sans-serif;
-  color: #9FA5AD;
+  font-size: .9em;
+  color: #7f8c8d;
 }
 
 a {
@@ -27,4 +33,23 @@ a {
 a:hover {
   color: #444;
 }
-\
+
+.nav {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 5em;
+  margin-right: 5em;
+  border-bottom: solid 1px #bbb;
+}
+
+.nav > h1 {
+  font-size: 48px;
+}
+
+.nav > li {
+  font-family: 'Roboto', sans-serif;
+  color: #555;
+  display: none;
+}

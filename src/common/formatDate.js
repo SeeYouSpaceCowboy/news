@@ -1,4 +1,4 @@
-const formatDate = {
+export const formatDate = {
   normalize: (date) => {
     var monthNames = [
       "January", "February", "March",
@@ -9,8 +9,7 @@ const formatDate = {
 
     var day = date.getDate()
     var monthIndex = date.getMonth()
-    var year = date.getFullYear()
 
-    return day + ' ' + monthNames[monthIndex] + ' ' + year;
+    return day + ' ' + monthNames[monthIndex]
   }
 }

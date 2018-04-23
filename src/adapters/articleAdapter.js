@@ -1,11 +1,11 @@
 import axios from 'axios'
-import { constant } from '../common/constants'
+import { constants } from '../common/constants'
 
-axios.defaults.baseURL = constant.URL
+axios.defaults.baseURL = constants.URL
 
 export const articleAdapter = {
   fetchAll: () => {
-    return axios.get(`?apiKey=${ constant.API_KEY }&country=us&category=general`)
+    return axios.get(`top-headlines?apiKey=${ constants.API_KEY }&sources=wired,the-verge,polygon,recode,new-scientist,techcrunch,mashable,new-scientist,axios,bloomberg,the-new-york-times,google-news,cnn,usa-today&pageSize=100`)
       .then(response => response.data.articles)
       .catch(error => error)
   },

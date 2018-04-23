@@ -1,14 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import { formatDate } from '../common/formatDate'
+
 const ArticleImgCard = ({ article }) =>
   <div className='card-img'>
-    <img src={ article.urlToImage }/>
+    <div className='card-img-container'>
+      <img src={ article.urlToImage }/>
+    </div>
     <div className='card-desc'>
-      <a href={ article.url }><h3>{ article.title }</h3></a>
-      <h4>By { (article.author === null || article.author === '') ? "Anonymous" : article.author }</h4>
+      <a href={ article.url } target="_blank"><h3>{ article.title }</h3></a>
+      <h4>{ (article.source.name === null || article.source.name === '') ? "Anonymous" : article.source.name.replace(".com", "") }, { formatDate.normalize(new Date(article.publishedAt)) }</h4>
       <p>{ article.description }</p>
-      <p>{ article.publishedAt }</p>
     </div>
   </div>
 
