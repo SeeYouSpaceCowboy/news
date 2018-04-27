@@ -8,3 +8,12 @@ export const fetchArticles = () => {
     payload: response
   }
 }
+
+export const fetchSlugArticles = (slug) => {
+  const response = articleAdapter.fetchSlug(slug)
+
+  return {
+    type: 'ARTICLES',
+    payload: response
+  }
+}

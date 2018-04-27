@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 h2, h3 {
@@ -37,11 +41,11 @@ a:hover {
 .nav {
   list-style: none;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  margin-left: 5em;
-  margin-right: 5em;
-  border-bottom: solid 1px #bbb;
+}
+
+.nav > * {
+  padding-left: 7%;
 }
 
 .nav > h1 {
@@ -51,5 +55,9 @@ a:hover {
 .nav > li {
   font-family: 'Roboto', sans-serif;
   color: #555;
-  display: none;
+}
+
+.hero-img > img {
+  width: 100%;
+  height: 100%;
 }
