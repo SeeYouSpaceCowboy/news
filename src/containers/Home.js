@@ -14,7 +14,6 @@ class Home extends Component {
 
   render() {
     let { articles } = this.props
-    let firstArticle = articles[0]
 
     return (
       <div>
@@ -32,7 +31,8 @@ Home.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    articles: state.articles.all
+    articles: state.articles.all,
+    firstArticle: state.articles.all[0]
   }
 }
 

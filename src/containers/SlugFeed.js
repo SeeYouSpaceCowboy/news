@@ -7,14 +7,23 @@ import { fetchSlugArticles } from '../actions/articleActions'
 import Feed from '../components/Feed'
 
 class SlugFeed extends Component {
-  componentWillMount() {
+  componentDidMount() {
     let slug = this.props.match.params.slug
+
     this.props.fetchSlugArticles(slug)
+  }
+
+  componentWillReceiveProps(newProps) {
+    if(this.props.match !== newProps.match && !!newProps.match) {
+      let slug = newProps.match.params.slug
+
+      this.props.fetchSlugArticles(slug)
+    }
   }
 
   render() {
     let { articles } = this.props
-    
+
     return <Feed articles={ articles }/>
   }
 }
